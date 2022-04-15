@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Russo+One";
 
 body {
-    background: rgba(0, 0, 0, 0);
+    background: #ffffff;
     text-align: center;
 }
 
@@ -12,6 +12,11 @@ body {
     }
 }
 
+.label {
+    background: linear-gradient(to right, #c3dbff, #f1cfff);
+    border-radius: 10px 20px;
+}
+
 h2.title {
     font-size:70px;
     text-align:center;
@@ -20,7 +25,7 @@ h2.title {
     text-transform:uppercase;
     font-family:'Russo One',sans-serif;
     font-weight:900;
-    letter-spacing:8px
+    letter-spacing:8px;
 }
 @-webkit-keyframes move-background {
     0%{background-position:-300px 0}
@@ -60,8 +65,9 @@ input {
     margin-left: auto;
 }
 
-button.search-giph {
-    height: 38px;
+button.search__giph {
+    height: 35px;
+    width: calc(100% - (100% - 35px));
     font-size:15px;
     text-align:center;
     font-family:'Russo One', serif;
@@ -70,14 +76,13 @@ button.search-giph {
 }
 
 .container {
-    max-width: calc(100% - 49px);
     margin: 0 auto;
     font-family: 'Russo One', serif;
+    color: rgba(42,43,56,0.84);
 }
 
 .img {
     width: 240px;
-    /*margin: 10px;*/
     position: relative;
 }
 
