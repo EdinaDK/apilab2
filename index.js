@@ -73,7 +73,7 @@ function init(url) {
     });
 }
 
-init(SEARCH);
+
 
 
 
