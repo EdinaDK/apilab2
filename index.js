@@ -1,6 +1,6 @@
 const API_KEY = "lyLn4WTM2Fzl6xjZKy08Te4fcTcRf2KB";
 const SEARCH = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=50&q=`;
-const API_URL_POPULAR = `http://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=50`;
+const API_URL_POPULAR = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=50`;
 
 let line = "найти гифку";
 let speed = 100;
@@ -58,7 +58,6 @@ function _Fetch(url) {
 
 document.addEventListener("DOMContentLoaded", init);
 function init(url) {
-    input.value === '';
     document.getElementById("searchGiphButton").addEventListener("click", ev => {
         ev.preventDefault();
         if (input.value === '') {
