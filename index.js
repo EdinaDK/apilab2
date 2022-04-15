@@ -16,6 +16,7 @@ function m_line() {
 }
 
 m_line();
+showTrend(API_URL_POPULAR);
 
 const input = document.getElementById('input');
 input.addEventListener('blur', m_line);
@@ -23,6 +24,12 @@ input.addEventListener('focus', () => {
     clearTimeout(to);
     input.value="";
 });
+
+function showTrend(url)
+{
+    console.log(url);
+    _Fetch(url);
+}
 
 function _Fetch(url) {
     fetch(url)
@@ -65,13 +72,6 @@ function init(url) {
     });
 }
 
-function showTrend(url)
-{
-    console.log(url);
-    _Fetch(url);
-}
-
-showTrend(API_URL_POPULAR);
 init(SEARCH);
 
 
