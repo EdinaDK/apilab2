@@ -58,6 +58,7 @@ function _Fetch(url) {
 
 document.addEventListener("DOMContentLoaded", init);
 function init(url) {
+    input.value === '';
     document.getElementById("searchGiphButton").addEventListener("click", ev => {
         ev.preventDefault();
         if (input.value === '') {
