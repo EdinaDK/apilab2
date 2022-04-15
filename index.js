@@ -7,8 +7,9 @@ let speed = 100;
 let i = 0;
 let to;
 function m_line() {
-    if (i++<line.length) document.primer.forma.value = line.substring(0,i);
+    if (i++<line.length) document.primer.forma.placeholder = line.substring(0,i);
     else {
+        document.primer.forma.placeholder = " ";
         document.primer.forma.value = " ";
         i = 0;
     }
