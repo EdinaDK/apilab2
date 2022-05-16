@@ -82,10 +82,6 @@ button.search__giph {
     color: rgba(42,43,56,0.84);
 }
 
-rangeInput {
-    width: calc(100% - 490px);
-}
-
 output {
     font-size:15px;
     font-family:'Russo One', serif;

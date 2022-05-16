@@ -1,9 +1,9 @@
 const API_KEY = "lyLn4WTM2Fzl6xjZKy08Te4fcTcRf2KB";
 const SEARCH = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=`;
 const API_URL_POPULAR = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=50`;
-const SEARCH_CATS = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=20&q=cats`;
-const SEARCH_MEMES = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=20&q=memes`;
-const SEARCH_DOGS = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=20&q=dogs`;
+const SEARCH_CATS = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=25&q=cats`;
+const SEARCH_MEMES = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=25&q=memes`;
+const SEARCH_DOGS = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=25&q=dogs`;
 //const donut = document.getElementById("donut");
 
 showTrend(API_URL_POPULAR);
@@ -14,10 +14,10 @@ function showTrend(url)
     _Fetch(url);
 }
 
-function fun1() {
-    let rng=document.getElementById('r1'); //rng - это ползунок
-    let i1=document.getElementById('i1'); // i1 - input
-    i1.value=rng.value;
+function ShowCategs(url) {
+    document.querySelector(".giphs").innerHTML = "";
+    console.log(url);
+    _Fetch(url);
 }
 
 function _Fetch(url) {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", init);
 function init(url) {
     document.getElementById("searchGiphButton").addEventListener("click", ev => {
         ev.preventDefault();
-        if (input.value === '') {
+        if (document.getElementById("input").value === '') {
             alert("введите запрос");
         } else {
             let str = document.getElementById("input").value.trim();

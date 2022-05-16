@@ -13,16 +13,15 @@
     <h2 class="title section"><a href="index.html"> giphy </a></h2>
     <div>
         <form name="categs">
-            <button type="submit" class = "search_categs btn-8" id = "btn1" onclick="_Fetch(SEARCH_CATS)">Мявки</button>
-            <button type="submit" class = "search_categs btn-8" id = "btn2" onclick="_Fetch(SEARCH_MEMES)">Мемы</button>
-            <button type="submit" class = "search_categs btn-8" id = "btn3" onclick="_Fetch(SEARCH_DOGS)">Псы</button>
+            <button type="submit" class = "search_categs btn-8" id = "btn1" onclick="ShowCategs(SEARCH_CATS)">Мявки</button>
+            <button type="submit" class = "search_categs btn-8" id = "btn2" onclick="ShowCategs(SEARCH_MEMES)">Мемы</button>
+            <button type="submit" class = "search_categs btn-8" id = "btn3" onclick="ShowCategs(SEARCH_DOGS)">Псы</button>
         </form>
         <form name="primer" action="#">
             <input type="text" class = "header__search" id="input" name="forma" placeholder="найти гифку">
             <button type="submit" class = "search__giph" onclick = init(SEARCH) id = "searchGiphButton">&#128269;</button>
             <div>
-                <input type="range" id="rangeInput" name="rangeInput" min="0" max="50" value="25"
-                       oninput="amount.value=rangeInput.value">
+                <input type="range" id="rangeInput" name="rangeInput" min="0" max="50" value="25" oninput="amount.value=rangeInput.value">
                 <output name="amount" for="rangeInput">25</output>
             </div>
         </form>
