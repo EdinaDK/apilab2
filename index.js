@@ -1,30 +1,12 @@
 const API_KEY = "lyLn4WTM2Fzl6xjZKy08Te4fcTcRf2KB";
-const SEARCH = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=50&q=`;
+const SEARCH = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=`;
 const API_URL_POPULAR = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=50`;
+const SEARCH_CATS = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=20&q=cats`;
+const SEARCH_MEMES = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=20&q=memes`;
+const SEARCH_DOGS = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=20&q=dogs`;
+//const donut = document.getElementById("donut");
 
-let line = "найти гифку";
-let speed = 100;
-let i = 0;
-let to;
-function m_line() {
-    if (i++<line.length) document.primer.forma.placeholder = line.substring(0,i);
-    else {
-        document.primer.forma.placeholder = " ";
-        document.primer.forma.value = " ";
-        i = 0;
-    }
-    to = setTimeout(m_line, speed);
-}
-
-m_line();
 showTrend(API_URL_POPULAR);
-
-const input = document.getElementById('input');
-input.addEventListener('blur', m_line);
-input.addEventListener('focus', () => {
-    clearTimeout(to);
-    input.value="";
-});
 
 function showTrend(url)
 {
@@ -65,7 +47,8 @@ function init(url) {
             alert("введите запрос");
         } else {
             let str = document.getElementById("input").value.trim();
-            url = url.concat(str);
+            let str1 = document.getElementById("range").value.trim();
+            url = url.concat(str1).concat("&q=").concat(str);
             console.log(url);
             document.querySelector(".giphs").innerHTML = "";
             _Fetch(url);

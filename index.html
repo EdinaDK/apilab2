@@ -12,12 +12,20 @@
 <div class = "label">
     <h2 class="title section"><a href="index.html"> giphy </a></h2>
     <div>
+        <form name="buttons" action="#">
+            <form name="categs">
+                <button type="submit" class = "search_categs btn-8" id = "btn1" onclick="_Fetch(SEARCH_CATS)">Мявки</button>
+                <button type="submit" class = "search_categs btn-8" id = "btn2" onclick="_Fetch(SEARCH_MEMES)">Мемы</button>
+                <button type="submit" class = "search_categs btn-8" id = "btn3" onclick="_Fetch(SEARCH_DOGS)">Псы</button>
+            </form>
         <form name="primer" action="#">
-            <input type="text" class = "header__search" id="input" name="forma">
+            <input type="text" class = "header__search" id="input" name="forma" placeholder="найти гифку">
             <button type="submit" class = "search__giph" onclick = init(SEARCH) id = "searchGiphButton">&#128269;</button>
+            <input type="range" id="range" min="0" max="50" step="1">
         </form>
     </div>
     <div class="container">
+        <div class="donut"></div>
         <div class="giphs" id ="giphs"></div>
     </div>
 </div>
