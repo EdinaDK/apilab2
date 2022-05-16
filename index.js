@@ -14,6 +14,12 @@ function showTrend(url)
     _Fetch(url);
 }
 
+function fun1() {
+    let rng=document.getElementById('r1'); //rng - это ползунок
+    let i1=document.getElementById('i1'); // i1 - input
+    i1.value=rng.value;
+}
+
 function _Fetch(url) {
     fetch(url)
         .then(response => response.json())
@@ -47,7 +53,7 @@ function init(url) {
             alert("введите запрос");
         } else {
             let str = document.getElementById("input").value.trim();
-            let str1 = document.getElementById("range").value.trim();
+            let str1 = document.getElementById("rangeInput").value.trim();
             url = url.concat(str1).concat("&q=").concat(str);
             console.log(url);
             document.querySelector(".giphs").innerHTML = "";

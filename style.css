@@ -82,27 +82,14 @@ button.search__giph {
     color: rgba(42,43,56,0.84);
 }
 
-/*.spinner {
-    display:none; position:absolute;
-    height: 50px;
-    width: 50px;
-    border-left: 3px solid greenyellow;
-    border-bottom: 3px solid greenyellow;
-    border-right: 3px solid greenyellow;
-    border-top: 3px solid transparent;
-    border-radius: 50%;
-    animation: spinner 1s linear infinite;
+rangeInput {
+    width: calc(100% - 490px);
 }
 
-@keyframes spinner {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}*/
+output {
+    font-size:15px;
+    font-family:'Russo One', serif;
+}
 
 @keyframes donut-spin {
     0% {
