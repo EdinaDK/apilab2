@@ -4,18 +4,13 @@ const API_URL_POPULAR = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KE
 const SEARCH_CATS = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=25&q=cats`;
 const SEARCH_MEMES = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=25&q=memes`;
 const SEARCH_DOGS = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=25&q=dogs`;
+const SEARCH_ANIME = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=25&q=anime`;
 //const donut = document.getElementById("donut");
 
 showTrend(API_URL_POPULAR);
 
 function showTrend(url)
 {
-    console.log(url);
-    _Fetch(url);
-}
-
-function ShowCategs(url) {
-    document.querySelector(".giphs").innerHTML = "";
     console.log(url);
     _Fetch(url);
 }
