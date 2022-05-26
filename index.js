@@ -12,6 +12,14 @@ showTrend(API_URL_POPULAR);
 function showTrend(url)
 {
     console.log(url);
+    document.querySelector(".giphs").innerHTML = "";
+    _Fetch(url);
+}
+
+function showSm(url)
+{
+    console.log(url);
+    document.querySelector(".giphs").innerHTML = "";
     _Fetch(url);
 }
 

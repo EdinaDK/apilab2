@@ -113,7 +113,7 @@ output {
 .giphs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .search_categs {
@@ -147,4 +147,15 @@ output {
     color: rgba(0, 0, 0, 0.93);
 }
 
+figure {
+    background: linear-gradient(to right, #9dc1ff, #dd94fc);
+    border: 1px dotted grey;
+    border-radius: 10px;
+    padding: 20px
+}
+
+figure img {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
 
